@@ -1,23 +1,19 @@
-
 print("Program starting.")
-print()
-
-x = int(input("Insert a positive integer: "))
-
-a = 0
-sequence = str(x)
-
-while x != 1:
-    if x % 2 == 0:
-        x = x // 2
+userinput = int(input("Insert a positive integer: "))
+sequencetotal = 0
+if userinput > 1:
+    print(userinput, end=" -> ")
+else:
+    print(userinput, end=" ")
+while userinput != 1:
+    if userinput % 2 == 0:
+        userinput = userinput // 2
     else:
-        x = x * 3 + 1
-
-    sequence += " -> " + str(x)
-    a += 1
-
-print(sequence)
-print("Sequence had", a, "total steps.")
-
-print()
-print("Program ending.")
+        userinput = (userinput * 3) + 1
+    sequencetotal += 1
+    if userinput > 1:
+        print(userinput, end=" -> ")
+    else:
+        print(userinput, end="")
+print("\nSequence had", sequencetotal, "total steps.")
+print("\nProgram ending.")
